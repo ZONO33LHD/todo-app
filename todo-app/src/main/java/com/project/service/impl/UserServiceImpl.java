@@ -3,8 +3,8 @@ package com.project.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.project.dao.UserMapper;
 import com.project.form.UserForm;
-import com.project.mapper.UserMapper;
 import com.project.service.UserService;
 
 /**

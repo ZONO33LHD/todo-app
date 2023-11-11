@@ -12,7 +12,7 @@ import lombok.Data;
  */
 @Data
 public class UserForm {
-
+	
 	@Size(max=20)
 	@Pattern(regexp = "^[a-zA-Z0-9]*$")
 	@NotNull

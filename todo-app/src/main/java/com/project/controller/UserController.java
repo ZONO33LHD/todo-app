@@ -54,7 +54,10 @@ public class UserController {
 		// ユーザ作成処理
 		userService.regist(userForm);
 		
-		return new ModelAndView("redirect:/top");
+		// リダイレクト先を設定
+		ModelAndView modelAndView = new ModelAndView("top");
+		
+		return modelAndView;
 	}
 	
 	
