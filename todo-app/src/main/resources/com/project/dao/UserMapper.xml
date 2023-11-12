@@ -10,5 +10,14 @@
         INSERT INTO SPRINGPROJECT.USER_MASTER (user_name, password)
         VALUES (#{userName}, #{password})
     </insert>
+    
+    <select id="selectUsers" resultType="com.project.entity.UserEntity">
+        SELECT
+            password
+        FROM 
+            USER_MASTER
+        WHERE 
+            user_name = #{userName}
+    </select>
 
 </mapper>

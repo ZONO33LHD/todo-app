@@ -4,6 +4,8 @@ import com.project.form.UserForm;
 
 public interface UserService {
 	
-	void regist(UserForm userform);
+	boolean loginProcess(UserForm userForm);
+		
+	void regist(UserForm userForm);
 
 }

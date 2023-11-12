@@ -1,0 +1,4 @@
+.text-danger {
+    color: red; /* テキストの色を赤に設定 */
+    font-weight: bold; /* テキストを太字に設定 */
+}
