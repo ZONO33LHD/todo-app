@@ -21,7 +21,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * ユーザに関わるControllerクラス
+ * ログインに関連するControllerクラス
  * 
  * @author nakazono
  */
@@ -29,7 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 @RequestMapping("/user")
 @RequiredArgsConstructor
-public class UserController {
+public class LoginController {
 
 	private final UserService userService;
 
@@ -110,6 +110,17 @@ public class UserController {
 	public String login(Model model) {
 		UserForm userForm = new UserForm();
 		model.addAttribute("userForm", userForm);
+		return "user/login";
+	}
+	
+	/**
+	 * ログアウト処理
+	 */
+	@PostMapping("/logout")
+	public String logout() {
+
+		SecurityContextHolder.clearContext(); 
+		
 		return "user/login";
 	}
 
